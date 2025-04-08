@@ -12,11 +12,19 @@ const Registration = () => {
 
 
 
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({...formData, [name]: value});
         console.log(`${name}: ${value}`);
+    };
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const API_URI = window.location.host === 'localhost' ? 'http://localhost:3000/users/register' : '';
+
+        
     };
 
 
@@ -50,7 +58,7 @@ const Registration = () => {
   
           {/* Submit Button */}
           <div className='registration-form-container button registration-form-container button:hover'>
-            <Button bg="primary" type="submit">Register</Button>
+            <Button onClick={handleSubmit} bg="primary" type="submit">Register</Button>
           </div>
         </form>
 
