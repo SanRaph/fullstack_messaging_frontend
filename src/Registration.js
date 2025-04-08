@@ -1,3 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+
 import './Registration.css';
 const Registration = () => {
     return(
@@ -31,9 +34,11 @@ const Registration = () => {
   
           {/* Submit Button */}
           <div>
-            <button type="submit">Register</button>
+            <Button bg="secondary" type="submit">Register</Button>
           </div>
         </form>
+
+        
       </div>
 
 
