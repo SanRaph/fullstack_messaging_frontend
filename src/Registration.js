@@ -5,6 +5,9 @@ import './Registration.css';
 import React from 'react';
 import { useState } from 'react';
 
+const API_URI = window.location.host === 'localhost' ? 'http://localhost:3000/users/register' : '';
+
+
 
 const Registration = () => {
 
@@ -22,7 +25,20 @@ const Registration = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const API_URI = window.location.host === 'localhost' ? 'http://localhost:3000/users/register' : '';
+        const data = {
+            username: formData.username,
+            password: formData.password,
+            address: formData.address,
+        };
+
+        fetch(API_URI, { method: 'POST', body: JSON.stringify(data), headers: {'content-type':'application/json'} })
+        .then(response => response.json())
+        .then(createdFormData => {
+            console.log('Gone to the web');
+            console.log(createdFormData);
+
+            setFormData({username: '', password: '', address: '',});
+        })
 
         
     };
