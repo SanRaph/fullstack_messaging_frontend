@@ -8,7 +8,14 @@ import { useState } from 'react';
 
 const Registration = () => {
 
-    const [] = useState();
+    const [ formData, setFormData ] = useState({username: '', password: '', address: '',});
+
+
+
+
+    const handleChange = () => {
+
+    };
 
 
 
@@ -23,20 +30,20 @@ const Registration = () => {
           {/* Name Input */}
           <div>
             <label htmlFor="name">Username:</label>
-            <input type="text" id="Username" name="Username" required/>
+            <input type="text" id="Username" name="Username" value={formData.username} onChange={handleChange} required/>
           </div>
   
   
           {/* Password Input */}
           <div>
             <label htmlFor="password">Password:</label>
-            <input type="password" id="password" name="password" required/>
+            <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required/>
           </div>
   
           {/* Confirm Password Input */}
           <div>
             <label htmlFor="confirmPassword">Address:</label>
-            <input type="text" id="address" name="address" required/>
+            <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} required/>
           </div>
   
           {/* Submit Button */}
