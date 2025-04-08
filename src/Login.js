@@ -10,12 +10,14 @@ const API_URI = window.location.host === 'localhost' ? 'http://localhost:3000/us
 
 const Login = () => {
 
+    const [formData, setFormData] = useState({});
+
 
 
     return(
-        <div>
+        <div className='login-form-container'>
       <form >
-        <div>
+        <div className='login-form-container'>
           <label>Email</label>
           <input
             type="email"
@@ -24,16 +26,16 @@ const Login = () => {
             required
           />
         </div>
-        <div>
-          <label>Password</label>
-          <input
+        <div className='login-form-container'>
+          <label >Password</label>
+          <input className='login-form-container'
             type="password"
             name="password"
             placeholder="Enter your password"
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <button className='login-form-container login-form-container button:hover' type="submit">Login</button>
       </form>
     </div>
     );

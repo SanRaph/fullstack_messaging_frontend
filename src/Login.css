@@ -8,11 +8,11 @@
     background-color: #f9f9f9;
   }
   
-  .registration-form-container form div {
+  .login-form-container form div {
     margin-bottom: 10px;
   }
   
-  .registration-form-container input {
+  .login-form-container input {
     width: 100%;
     padding: 8px;
     margin: 5px 0;
@@ -20,7 +20,7 @@
     border: 1px solid #ccc;
   }
   
-  .registration-form-container button {
+  .login-form-container button {
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -30,6 +30,6 @@
     cursor: pointer;
   }
   
-  .registration-form-container button:hover {
+  .login-form-container button:hover {
     background-color: #45a049;
   }
