@@ -27,29 +27,29 @@ const Registration = () => {
 
     return(
 
-        <div className="Div">
+        <div className="registration-form-container">
         <form >
           {/* Name Input */}
-          <div>
+          <div className='registration-form-container input'>
             <label htmlFor="name">Username:</label>
             <input type="text" id="username" name="username" value={formData.username} onChange={handleChange} required/>
           </div>
   
   
           {/* Password Input */}
-          <div>
+          <div className='registration-form-container input'>
             <label htmlFor="password">Password:</label>
             <input type="password" id="password" name="password" value={formData.password} onChange={handleChange} required/>
           </div>
   
           {/* Confirm Password Input */}
-          <div>
+          <div className='registration-form-container input'>
             <label htmlFor="confirmPassword">Address:</label>
             <input type="text" id="address" name="address" value={formData.address} onChange={handleChange} required/>
           </div>
   
           {/* Submit Button */}
-          <div>
+          <div className='registration-form-container button registration-form-container button:hover'>
             <Button bg="primary" type="submit">Register</Button>
           </div>
         </form>
