@@ -27,7 +27,7 @@ const Login = () => {
             password: formData.password,
         };
 
-        fetch(API_URI, { method: 'POST', body: JSON.stringify(data), headers: {'type': 'application/json'}, })
+        fetch(API_URI, { method: 'POST', body: JSON.stringify(data), headers: {'content-type': 'application/json'}, })
         .then(response => response.json)
         .then(loggeData => {
             setFormData({ username: '', password: '', });
@@ -63,7 +63,7 @@ const Login = () => {
             required
           />
         </div>
-        <button className='login-form-container login-form-container button:hover' type="submit">Login</button>
+        <button onClick={handleSubmit} className='login-form-container login-form-container button:hover' type="submit">Login</button>
       </form>
     </div>
     );

@@ -33,7 +33,6 @@ const Registration = () => {
         fetch(API_URI, { method: 'POST', body: JSON.stringify(data), headers: {'content-type':'application/json'} })
         .then(response => response.json())
         .then(createdFormData => {
-            console.log('Gone to the web');
             console.log(createdFormData);
 
             setFormData({username: '', password: '', address: '',});
