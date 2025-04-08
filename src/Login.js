@@ -14,8 +14,29 @@ const Login = () => {
 
     const handleChange = (e) => {
         const {name, value } = e.target;
+
+        setFormData({...formData, [name]: value});
         console.log(`${name}: ${value}`);
     };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const data = {
+            username: formData.username,
+            password: formData.password,
+        };
+
+        fetch(API_URI, { method: 'POST', body: JSON.stringify(data), headers: {'type': 'application/json'}, })
+        .then(response => response.json)
+        .then(loggeData => {
+            setFormData({ username: '', password: '', });
+            console.log(loggeData);
+        });
+
+
+        
+    }
 
 
 
