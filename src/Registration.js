@@ -2,9 +2,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 import './Registration.css';
+import React from 'react';
+import { useState } from 'react';
 
 
 const Registration = () => {
+
+    const [] = useState();
+
+
+
+
+
+
+
     return(
 
         <div className="Div">
