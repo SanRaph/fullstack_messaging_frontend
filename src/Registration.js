@@ -1,6 +1,43 @@
 import './Registration.css';
 const Registration = () => {
-    return(<h1 className='App'>Registration!</h1>);
+    return(
+
+        <div className="">
+        <h2>Register</h2>
+        <form >
+          {/* Name Input */}
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+  
+          {/* Email Input */}
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+  
+          {/* Password Input */}
+          <div>
+            <label htmlFor="password">Password:</label>
+            <input type="password" id="password" name="password" />
+          </div>
+  
+          {/* Confirm Password Input */}
+          <div>
+            <label htmlFor="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" />
+          </div>
+  
+          {/* Submit Button */}
+          <div>
+            <button type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+
+
+ );
 };
 
 export default Registration;
