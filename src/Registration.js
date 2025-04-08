@@ -13,8 +13,10 @@ const Registration = () => {
 
 
 
-    const handleChange = () => {
-
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({...formData, [name]: value});
+        console.log(`${name}: ${value}`);
     };
 
 
@@ -30,7 +32,7 @@ const Registration = () => {
           {/* Name Input */}
           <div>
             <label htmlFor="name">Username:</label>
-            <input type="text" id="Username" name="Username" value={formData.username} onChange={handleChange} required/>
+            <input type="text" id="username" name="username" value={formData.username} onChange={handleChange} required/>
           </div>
   
   
