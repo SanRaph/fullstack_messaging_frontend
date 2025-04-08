@@ -2,39 +2,35 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 
 import './Registration.css';
+
+
 const Registration = () => {
     return(
 
-        <div className="">
-        <h2>Register</h2>
+        <div className="Div">
         <form >
           {/* Name Input */}
           <div>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" />
+            <label htmlFor="name">Username:</label>
+            <input type="text" id="Username" name="Username" required/>
           </div>
   
-          {/* Email Input */}
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" />
-          </div>
   
           {/* Password Input */}
           <div>
             <label htmlFor="password">Password:</label>
-            <input type="password" id="password" name="password" />
+            <input type="password" id="password" name="password" required/>
           </div>
   
           {/* Confirm Password Input */}
           <div>
-            <label htmlFor="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" />
+            <label htmlFor="confirmPassword">Address:</label>
+            <input type="text" id="address" name="address" required/>
           </div>
   
           {/* Submit Button */}
           <div>
-            <Button bg="secondary" type="submit">Register</Button>
+            <Button bg="primary" type="submit">Register</Button>
           </div>
         </form>
 
