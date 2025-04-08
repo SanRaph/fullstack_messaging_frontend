@@ -9,5 +9,36 @@ const API_URI = window.location.host === 'localhost' ? 'http://localhost:3000/us
 
 
 const Login = () => {
+
+
+
+    return(
+        <div>
+      <form >
+        <div>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div>
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    );
     
 };
+
+
+export default Login;
