@@ -1,4 +1,5 @@
 
+import './Registration';
 import './App.css';
 
 function App() {
