@@ -10,7 +10,12 @@ const API_URI = window.location.host === 'localhost' ? 'http://localhost:3000/us
 
 const Login = () => {
 
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({username: '', password: ''});
+
+    const handleChange = (e) => {
+        const {name, value } = e.target;
+        console.log(`${name}: ${value}`);
+    };
 
 
 
@@ -18,11 +23,12 @@ const Login = () => {
         <div className='login-form-container'>
       <form >
         <div className='login-form-container'>
-          <label>Email</label>
+          <label>Username</label>
           <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
+            type="username"
+            name="username"
+            value={formData.username}
+            onChange={handleChange}
             required
           />
         </div>
@@ -31,7 +37,8 @@ const Login = () => {
           <input className='login-form-container'
             type="password"
             name="password"
-            placeholder="Enter your password"
+            value={formData.password}
+            onChange={handleChange}                    
             required
           />
         </div>
