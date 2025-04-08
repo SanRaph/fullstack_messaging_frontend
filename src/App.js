@@ -1,10 +1,13 @@
 
 import './Registration';
 import './App.css';
+import Registration from './Registration';
 
 function App() {
-  return (
-   <h1 className='App'>Happy Hacking!</h1>
+  return (<>
+  <Registration />
+  <h1 className='App'>Happy Hacking!</h1>
+  </>
   );
 }
 
