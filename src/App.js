@@ -3,7 +3,8 @@ import './Registration';
 import './App.css';
 import Login from './Login'
 import Registration from './Registration';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NotFound from './404'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -12,15 +13,17 @@ function App() {
         <h1>React Router Example</h1>
         <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/registration">Registration</Link></li>
+            <li><Link to="*">NotFound</Link></li>
           </ul>
         </nav>
         <Routes>
           <Route path="/" />
           <Route path="/registration" element={<Registration />} />
           <Route path="/login" element={<Login />} />
-          <Route path="*"  />
+          <Route path="*"  element={<NotFound />} />
         </Routes>
       </div>
 
