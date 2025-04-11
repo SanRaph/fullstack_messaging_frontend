@@ -17,17 +17,18 @@ function App() {
 
 
   return (
-    <Router>
-        <div>
-         <h1 className='Text-Typed'>
+    <>
+        <h1 className='Text-Typed'>
            Shop{" "}<ReactTyped strings={["Here At PikinHop"]} typeSpeed={100} loop />
          </h1>
+    <Router>
+        <div>
         <nav>
         <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/registration">Registration</Link></li>
-            <li><Link to="*">NotFound</Link></li>
+            <li><Link onClick={() => openInTab('/')} to="/">Home</Link></li>
+            <li><Link onClick={() => openInTab('/login')} to="/login">Login</Link></li>
+            <li><Link onClick={() => openInTab('/registration')} to="/registration">Registration</Link></li>
+            <li><Link onClick={() => openInTab('*')} to="*">NotFound</Link></li>
           </ul>
         </nav>
         <Routes>
@@ -40,6 +41,8 @@ function App() {
 
 
     </Router>
+
+    </>
   );
 }
 
