@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
+
 .App {
   text-align: center;
 }
@@ -5,6 +7,21 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Text-Typed{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:70px;
+	letter-spacing:0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+						8px 8px #ff1f8f,
+						20px 20px #fbf9f9;
 }
 
 @media (prefers-reduced-motion: no-preference) {

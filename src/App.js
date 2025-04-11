@@ -1,16 +1,18 @@
-
 import './Registration';
 import './App.css';
 import Login from './Login'
 import Registration from './Registration';
 import NotFound from './404'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { ReactTyped } from "react-typed";
 
 function App() {
   return (
     <Router>
         <div>
-        <h1>React Router Example</h1>
+         <h1 className='Text-Typed'>
+           Shop{" "}<ReactTyped strings={["Here At PikinHop"]} typeSpeed={100} loop />
+         </h1>
         <nav>
         <ul>
             <li><Link to="/">Home</Link></li>
