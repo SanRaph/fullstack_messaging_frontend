@@ -7,6 +7,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ReactTyped } from "react-typed";
 
 function App() {
+
+  const openInTab = (url) => {
+    const newTab = window.open(url, '_blank', 'noopener,noreferrer');
+    if(newTab){
+      newTab.opener = null;
+    }
+  }
+
+
   return (
     <Router>
         <div>
