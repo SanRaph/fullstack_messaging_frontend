@@ -3,10 +3,21 @@ import './App.css';
 import Login from './Login'
 import Registration from './Registration';
 import NotFound from './404'
+import Home from './Home'
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { ReactTyped } from "react-typed";
 
 function App() {
+  const [page, setPage] = useState('home');
+
+  const renderPage = () => {
+    if (page === 'home') return <Home />;
+    if (page === 'login') return <Login />;
+    if (page === 'registration') return <Registration />;
+    if (page === 'notfound') return <NotFound />;
+  };
 
   const openInTab = (url) => {
     const newTab = window.open(url, '_blank', 'noopener,noreferrer');
@@ -17,32 +28,13 @@ function App() {
 
 
   return (
-    <>
-        <h1 className='Text-Typed'>
-           Shop{" "}<ReactTyped strings={["Here At PikinHop"]} typeSpeed={100} loop />
-         </h1>
-    <Router>
-        <div>
-        <nav>
-        <ul>
-            <li><Link onClick={() => openInTab('/')} to="/">Home</Link></li>
-            <li><Link onClick={() => openInTab('/login')} to="/login">Login</Link></li>
-            <li><Link onClick={() => openInTab('/registration')} to="/registration">Registration</Link></li>
-            <li><Link onClick={() => openInTab('*')} to="*">NotFound</Link></li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/" />
-          <Route path="/registration" element={<Registration />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="*"  element={<NotFound />} />
-        </Routes>
-      </div>
+    <div>
+      <Button onClick={() => setPage('home')}>Home</Button>
+      <Button onClick={() => setPage('login')}>Login</Button>
+      <Button onClick={() => setPage('registration')}>Registration</Button>
 
-
-    </Router>
-
-    </>
+      {renderPage()}
+    </div>
   );
 }
 
