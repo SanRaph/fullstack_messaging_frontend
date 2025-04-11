@@ -2,6 +2,7 @@
     top: 30px;
     border-radius: 12px;
     overflow: hidden;
+    font-size: 40px;
     transition: transform 0.25s ease, 0.25s ease;
     max-width: 50%;
     margin: auto;

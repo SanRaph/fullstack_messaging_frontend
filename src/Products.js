@@ -32,13 +32,12 @@ function ProductPage() {
 
   return (
     <div className="product-page">
-      <h5>Products</h5>
       <div className="product-grid">
         {products.map(product => (
           <div className="product-card" key={product.id}>
             <img src={product.image} alt={product.title} width="100" />
             <small>{product.title}</small>
-            <p>&#8358;{product.price}</p>
+            <p>${product.price}</p>
             <Button>Add to Cart</Button>
           </div>
         ))}
