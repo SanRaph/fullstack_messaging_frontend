@@ -36,12 +36,8 @@ function ProductPage() {
           
           <section className="product" key={product.id}>
 	           <div className="product__photo">
-		               <div className="photo-container">
+		               <div className="photo-container grid-item">
 			                <div className="photo-main">
-			                 	<div className="controls">
-				                	<i class="material-icons">share</i>
-				                	<i class="material-icons">favorite_border</i>
-			              	</div>
 			               <img src={product.image} alt={product.title} />
 			            </div>
 			   <div class="photo-album">
@@ -72,7 +68,7 @@ function ProductPage() {
 			</ul>
 		</div>
 		<div className="description">
-			<h3>BENEFITS</h3>
+			<h3>DESCRIPTION</h3>
 			<ul>
 				<li>{product.decription}</li>
 			</ul>
