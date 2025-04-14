@@ -1,8 +1,8 @@
 .Text-Typed {
-    top: 30px;
+    top: 60px;
     border-radius: 12px;
     overflow: hidden;
-    font-size: 40px;
+    font-size: 20px;
     transition: transform 0.25s ease, 0.25s ease;
     max-width: 50%;
     max-height: 60%;

@@ -34,11 +34,11 @@ function ProductPage() {
     <div >
         {products.length > 0 && products.map((product) => (
           
-          <section class="product" key={product.id}>
-	           <div class="product__photo">
-		               <div class="photo-container">
-			                <div class="photo-main">
-			                 	<div class="controls">
+          <section className="product" key={product.id}>
+	           <div className="product__photo">
+		               <div className="photo-container">
+			                <div className="photo-main">
+			                 	<div className="controls">
 				                	<i class="material-icons">share</i>
 				                	<i class="material-icons">favorite_border</i>
 			              	</div>
@@ -54,15 +54,15 @@ function ProductPage() {
 			</div>
 		</div>
 	</div>
-	<div class="product__info">
-		<div class="title">
+	<div className="product__info">
+		<div className="title">
 			<h1>{product.title}</h1>
 			<span>COD: 45999</span>
 		</div>
-		<div class="price">&#8358;
+		<div className="price">&#8358;
 			 <small>{product.price}</small>
 		</div>
-		<div class="variant">
+		<div className="variant">
 			<h3>SELECT A COLOR</h3>
 			<ul>
 				<li><img src={product.image} alt="green apple" /></li>
@@ -71,7 +71,7 @@ function ProductPage() {
 				<li><img src={product.image} alt="red apple" /></li>
 			</ul>
 		</div>
-		<div class="description">
+		<div className="description">
 			<h3>BENEFITS</h3>
 			<ul>
 				<li>{product.decription}</li>

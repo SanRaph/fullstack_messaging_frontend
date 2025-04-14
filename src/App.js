@@ -29,9 +29,37 @@ function App() {
 
   return (
     <div>
-      <Button onClick={() => setPage('home')}>Home</Button>
-      <Button onClick={() => setPage('login')}>Login</Button>
-      <Button onClick={() => setPage('registration')}>Registration</Button>
+
+<nav className="menu" id="nav">
+  <span className="nav-item">
+		<p onClick={() => setPage('home')}>Home</p>
+	</span>
+
+	<span className="nav-item">
+		<p href="#">Search</p>
+	</span>
+
+	<span className="nav-item">
+		<p href="#">Notifications</p>
+	</span>
+
+	<span className="nav-item">
+		<p href="#">Favorites</p>
+	</span>
+  
+	<span className="nav-item">
+		<p href="#">Your Profile</p>
+	</span>
+
+  <span className="nav-item">
+		<p onClick={() => setPage('login')}>Login</p>
+	</span>
+
+  <span className="nav-item">
+    <p onClick={() => setPage('registration')}>Registration</p>
+	  </span>
+</nav>
+ 
 
       {renderPage()}
     </div>
