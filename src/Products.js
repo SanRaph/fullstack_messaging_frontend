@@ -27,7 +27,7 @@ function ProductPage() {
       });
   }, []);
 
-  if (loading) return <p>Loading products...</p>;
+  if (loading) return <h3>Loading products...</h3>;
   if (error) return <p>Error: {error}</p>;
 
   return (
