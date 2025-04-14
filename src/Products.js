@@ -60,7 +60,7 @@ function ProductPage() {
 			<span>COD: 45999</span>
 		</div>
 		<div class="price">&#8358;
-			 <span>{product.price}</span>
+			 <small>{product.price}</small>
 		</div>
 		<div class="variant">
 			<h3>SELECT A COLOR</h3>
